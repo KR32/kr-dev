@@ -1,0 +1,194 @@
+.logo {
+    max-height: 7rem;
+    border-radius: 2rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+body {
+    /* background-color: #131316; */
+    background-color: #1b1f24;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+/* section { */
+    /* display: grid; */
+    /* place-items: center;
+    align-content: center; */
+    /* min-height: 100vh; */
+/* } */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    
+}
+
+.vertical-line {
+    border-left: 2px solid #6e7681;
+    height: 100%;
+    left: calc(22% - 6px);
+    /* top: 183%; */
+    position: absolute;
+    z-index: -1;
+  }
+
+.octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+    color:#6e7681;
+    background-color: #1b1f24;
+    /* position: absolute; */
+    left: calc(22% - 6px);
+    z-index: 1;
+}
+
+.octicon-git-commit {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+    color:#6e7681;
+    background-color: #1b1f24;
+    /* position: absolute; */
+    left: calc(22% - 6px);
+    z-index: 1;
+}
+
+.octicon-feed-merged {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+    color: #6e7681;
+}
+
+.avatar-circle {
+    margin: 2px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+
+.TimelineItem {
+    display: flex;
+    margin-left: 16px;
+    margin-top: 5rem;
+    padding: 16px 0;
+    position: relative;
+}
+
+.TimelineItem-badge {
+    align-items: center;
+    background-color: transparent;
+    border: 2px;
+    border-radius: 50%;
+    color: transparent;
+    display: flex;
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    margin-left: calc(22% - 29px);
+    margin-right: 2%;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+
+.TimelineItem-body {
+    background-color: #1b1f24;
+    color: #ffffff;
+    flex: auto;
+    /* margin-top: 20%; */
+    margin-left: 0%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.TimelineItem-body h1 {
+    margin-top: 0px;
+}
+
+.about-box {
+    padding: 2rem;
+    border-radius: 12px;
+    border-color: #ffffff;
+    border-style:solid;
+    background-color: #1b1f24;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0px;
+    min-height: 30rem;
+    place-items: center;
+    align-content: center;
+    display: grid;
+}
+
+.navbar-fixed-top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+    background: #1b1f24;
+}
+
+.navbar-fixed-top.cbp-af-header-shrink {
+	padding: 100px 0;
+}
+
+.menu-bar {
+    margin: 3rem;
+}
+
+.menu-item {
+    padding: 0.5rem;
+    background: none;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-item::selection {
+    border-color: #701bad;
+    border-radius: 5px;
+    border-style: solid;
+    border-spacing: 0cap;
+}
+
+.menu-item:hover {
+    animation: my-animation 0.1s;
+    border-color: #701bad;
+    border-radius: 5px;
+    border-style: solid;
+    border-spacing: 3rem;
+}
+
+@keyframes my-animation {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+  }
