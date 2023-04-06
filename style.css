@@ -1,6 +1,7 @@
-.logo {
-    max-height: 7rem;
-    border-radius: 2rem;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
@@ -14,6 +15,165 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header styles */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color:#fff;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #555
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+ul li:last-child {
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    margin-top: 1.5em;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+
+.branch-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #6e7681;
+}
+
+
+/* Git log style */
+
+.grap-container {
+    position: relative;
+}
+
+.commit {
+    position: relative;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #6e7681;
+    padding-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.commit.first {
+    border-left: 0px;
+}
+
+
+.commit__header {
+    font-family: monospace;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.commit__hash {
+    font-family: monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.commit__date {
+    font-style: italic;
+    color: yellowgreen;
+}
+
+.commit-date:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6e7681;
+    border: 2px solid #6e7681;
+    transform: translate(-50%, -50%);
+}
+
+.commit__message {
+    margin-bottom: 10px;
+}
+
+.commit__diff {
+    margin-left: 2em;
+    font-family: monospace;
+    white-space: pre;
+}
+
+.added {
+    background-color: #e6ffed;
+}
+
+.modified {
+    background-color: #fffbe6;
+}
+
+.deleted {
+    background-color: #ffe6e6;
+}
+
+
+
+/* old styles */
 html {
     overflow: scroll;
     overflow-x: hidden;
@@ -27,35 +187,6 @@ html {
     background: #FF0000;
 }
 
-/* section { */
-    /* display: grid; */
-    /* place-items: center;
-    align-content: center; */
-    /* min-height: 100vh; */
-/* } */
-
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    
-}
-
-.vertical-line {
-    border-left: 2px solid #6e7681;
-    height: 100%;
-    left: calc(22% - 6px);
-    /* top: 183%; */
-    position: absolute;
-    z-index: -1;
-  }
 
 .octicon {
     display: inline-block;
@@ -91,47 +222,51 @@ html {
 
 .avatar-circle {
     margin: 2px;
-    margin-left: 3px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 
 .TimelineItem {
-    display: flex;
-    margin-left: 16px;
-    margin-top: 5rem;
-    padding: 16px 0;
     position: relative;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #6e7681;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .TimelineItem-badge {
     align-items: center;
+    position: absolute;
     background-color: transparent;
     border: 2px;
     border-radius: 50%;
     color: transparent;
     display: flex;
-    flex-shrink: 0;
+    flex-direction: row;
     height: 32px;
     justify-content: center;
-    margin-left: calc(22% - 29px);
-    margin-right: 2%;
-    position: relative;
-    width: fit-content;
-    z-index: 1;
+    left: calc(22% - -15px);
 }
 
 .TimelineItem-body {
     background-color: #1b1f24;
     color: #ffffff;
     flex: auto;
-    /* margin-top: 20%; */
+    margin-top: 6%;
     margin-left: 0%;
     max-width: 100%;
     min-width: 0;
 }
 
-.TimelineItem-body h1 {
-    margin-top: 0px;
+.TimelineItem-head {
+    position: absolute;
+    left: -28px;
+}
+
+.TimelineItem-head .commit-heading {
+    color: #ffffff;
+    margin-left: 15px;
 }
 
 .about-box {
@@ -149,46 +284,3 @@ html {
     align-content: center;
     display: grid;
 }
-
-.navbar-fixed-top {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 1;
-    background: #1b1f24;
-}
-
-.navbar-fixed-top.cbp-af-header-shrink {
-	padding: 100px 0;
-}
-
-.menu-bar {
-    margin: 3rem;
-}
-
-.menu-item {
-    padding: 0.5rem;
-    background: none;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.menu-item::selection {
-    border-color: #701bad;
-    border-radius: 5px;
-    border-style: solid;
-    border-spacing: 0cap;
-}
-
-.menu-item:hover {
-    animation: my-animation 0.1s;
-    border-color: #701bad;
-    border-radius: 5px;
-    border-style: solid;
-    border-spacing: 3rem;
-}
-
-@keyframes my-animation {
-    from { transform: scale(1); }
-    to { transform: scale(1.2); }
-  }
