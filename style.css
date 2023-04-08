@@ -4,12 +4,23 @@
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+:root {
+    --screen-height: 100vh;
+    --screen-width: 100vw;
+  }
+  
+@media screen and (min-width: 768px) {
+    :root {
+        --screen-height: 90vh;
+        --screen-width: 90vw;
+    }
+}
+
 body {
     /* background-color: #131316; */
     background-color: #1b1f24;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family:  'Sofia Sans Semi Condensed', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -273,13 +284,11 @@ html {
     padding: 2rem;
     border-radius: 12px;
     border-color: #ffffff;
-    border-style:solid;
+    border-style: solid;
     background-color: #1b1f24;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 0px;
-    min-height: 30rem;
+    margin: 2rem;
+    min-height: var(--screen-height);
+    min-width: var(--screen-width);
     place-items: center;
     align-content: center;
     display: grid;
