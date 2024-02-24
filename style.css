@@ -831,10 +831,10 @@ code {
 
 .TimelineItem-head {
   position: absolute;
-  left: -28px;
+  left: -14px;
 }
 
 .TimelineItem-head .commit-heading {
   color: #ffffff;
-  margin-left: 0px;
+  margin-left: 9px;
 }
